@@ -2,6 +2,11 @@
 #include <vector>
 using namespace std;
 
+vector<vector<int> > makeMatrix(vector<string> equations){
+        //code for creating a 2d integer matrix from a 1d string vector.
+        vector<vector<int> > placeholder;
+        return placeholder;
+}
 
 void printer(vector<string> equations){
         for(int i=0;i<equations.size();i++){

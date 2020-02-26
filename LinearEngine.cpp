@@ -3,9 +3,9 @@
 using namespace std;
 
 
-void printer(std::vector<string> x){
-        for(int i=0;i<x.size();i++){
-                cout << x[i] << endl;
+void printer(std::vector<string> equations){
+        for(int i=0;i<equations.size();i++){
+                cout << equations[i] << endl;
         }
 }
 

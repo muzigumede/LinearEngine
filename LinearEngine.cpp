@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void printer(std::vector<string> equations){
+void printer(vector<string> equations){
         for(int i=0;i<equations.size();i++){
                 cout << equations[i] << endl;
         }

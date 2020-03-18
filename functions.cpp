@@ -4,6 +4,7 @@ void capture(std::vector<std::string>* sysOfEqPtr){
         std::vector<std::string> sysOfEq;
   
         for(int i=0;i<10;i++){
+
                 std::cout << "Enter equation " + std::to_string(i + 1) + " / click Enter 0 to terminate.\n";
                 std::cin >> equation;
   

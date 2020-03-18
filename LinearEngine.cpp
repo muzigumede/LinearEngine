@@ -9,6 +9,7 @@ int main(){
          
         std::vector<std::string> sysOfEq;
         capture(&sysOfEq);
+
         printer(sysOfEq);
 
         return 0;
@@ -35,6 +36,7 @@ void capture(std::vector<std::string>* sysOfEqPtr){
         }
 }
 
+//to transform input form a system of equations to a matrix
 std::vector<std::vector<int> > toMatrix(std::vector<std::string> equations){
         //code for creating a 2d integer matrix from a 1d string vector.
         std::vector<std::vector<int> > placeholder;

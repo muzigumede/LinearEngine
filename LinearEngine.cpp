@@ -27,10 +27,10 @@ void capture(std::vector<std::string>* sysOfEqPtr){
                 if(equation != "0" && equation != ""){
                         (*sysOfEqPtr).push_back(equation);
                         
-                }else if(equation == ""){
+                } else if(equation == ""){
                     std::cout << "Please enter a valid equation\n";
                     
-                }else{
+                } else{
                         break;
                 }
         }

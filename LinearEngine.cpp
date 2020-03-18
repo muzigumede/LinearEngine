@@ -1,39 +1,38 @@
 #include <iostream>
 #include <vector>
 
-capture(std::vector<std::string>* sysOfEqPtr);
+void capture(std::vector<std::string>* sysOfEqPtr);
 std::vector<std::vector<int> > toMatrix(std::vector<std::string> equations);
 void printer(std::vector<std::string> equations);
 
 int main(){
          
         std::vector<std::string> sysOfEq;
-        capture();
-        printer(equations);
+        capture(&sysOfEq);
+        printer(sysOfEq);
 
         return 0;
 }
 
-capture(std::vector<std::string>* sysOfEqPtr){
+void capture(std::vector<std::string>* sysOfEqPtr){
         
         std::string equation;
-        std::vector<string> sysOfEq;
+        std::vector<std::string> sysOfEq;
 
         for(int i=0;i<10;i++){
-                std::cout << "Enter equation " + to_string(i + 1) + " / click Enter 0 to terminate.\n";
+                std::cout << "Enter equation " + std::to_string(i + 1) + " / click Enter 0 to terminate.\n";
                 std::cin >> equation;
 
                 if(equation != "0" && equation != ""){
-                        *sysOfEqPtr.push_back(equation);
+                        (*sysOfEqPtr).push_back(equation);
                         
-                }else if(equation = ""){
+                }else if(equation == ""){
                     std::cout << "Please enter a valid equation\n";
                     
                 }else{
                         break;
                 }
         }
-        return sysOfEq;
 }
 
 std::vector<std::vector<int> > toMatrix(std::vector<std::string> equations){
@@ -42,9 +41,9 @@ std::vector<std::vector<int> > toMatrix(std::vector<std::string> equations){
         return placeholder;
 }
 
-void printer(std::vector<std::string> equations){
-        for(int i=0;i<equations.size();i++){
-                std::cout << equations[i] << "\n";
+void printer(std::vector<std::string> sysOfEq){
+        for(int i=0;i<sysOfEq.size();i++){
+                std::cout << sysOfEq[i] << "\n";
         }
 }
 

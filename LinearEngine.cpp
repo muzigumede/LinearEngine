@@ -1,19 +1,20 @@
 #include <iostream>
 #include <vector>
 
-std::vector<std::string> capture();
+capture(std::vector<std::string>* sysOfEqPtr);
 std::vector<std::vector<int> > toMatrix(std::vector<std::string> equations);
 void printer(std::vector<std::string> equations);
 
 int main(){
          
-        std::vector<std::string> sysOfEq = capture();
+        std::vector<std::string> sysOfEq;
+        capture();
         printer(equations);
 
         return 0;
 }
 
-std::vector<std::string> capture(){
+capture(std::vector<std::string>* sysOfEqPtr){
         
         std::string equation;
         std::vector<string> sysOfEq;
@@ -23,7 +24,7 @@ std::vector<std::string> capture(){
                 std::cin >> equation;
 
                 if(equation != "0" && equation != ""){
-                        sysOfEq.push_back(equation);
+                        *sysOfEqPtr.push_back(equation);
                         
                 }else if(equation = ""){
                     std::cout << "Please enter a valid equation\n";

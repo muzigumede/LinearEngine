@@ -24,6 +24,11 @@ void capture(std::vector<std::string>* sysOfEqPtr){
 std::vector<std::vector<int> > toMatrix(std::vector<std::string> equations){
         //code for creating a 2d integer matrix from a 1d string vector.
         std::vector<std::vector<int> > placeholder;
+        
+        for(int i = 0; i<10; i++){
+                
+        }
+
         return placeholder;
 }
   

@@ -23,13 +23,17 @@ void capture(std::vector<std::string>* sysOfEqPtr){
 //to transform input form a system of equations to a matrix
 std::vector<std::vector<int> > toMatrix(std::vector<std::string> equations){
         //code for creating a 2d integer matrix from a 1d string vector.
-        std::vector<std::vector<int> > placeholder;
-        
-        for(int i = 0; i<10; i++){
-                
-        }
+        std::vector<std::vector<int> > augMatrix(5, std::vector<int> (5,0));
 
-        return placeholder;
+        std::smatch matches;
+        std::regex re("-");
+
+        bool status = std::regex_search(equations[0], matches, re);
+        int size = matches.size();
+
+        std::cout << status << size << "\n";
+
+        return augMatrix;
 }
   
 void printer(std::vector<std::string> sysOfEq){

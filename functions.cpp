@@ -26,7 +26,7 @@ std::vector<std::vector<int> > toMatrix(std::vector<std::string> equations){
         std::vector<std::vector<int> > augMatrix(5, std::vector<int> (5,0));
 
         std::smatch matches;
-        std::regex re("-");
+        std::regex re("-+");
 
         bool status = std::regex_search(equations[0], matches, re);
         int size = matches.size();

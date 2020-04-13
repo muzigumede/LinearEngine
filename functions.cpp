@@ -1,3 +1,4 @@
+//separate functions module
 void capture(std::vector<std::string>* sysOfEqPtr){
          
         std::string equation;
